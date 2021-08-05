@@ -1,0 +1,5 @@
+- name: 'Update apt cache and do safe-upgrade'
+  apt: 
+    update_cache: true
+    upgrade: safe
+  changed_when: false
