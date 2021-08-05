@@ -4,10 +4,8 @@
   become: true
   tasks:
 
-  - name: 'Update apt cache'
+  - name: 'Update apt cache and do safe-upgrade'
     apt: 
       update_cache: true
-
-  - name: 'Do a safe system upgrade.'
-    apt:
       upgrade: safe
+    changed_when: false
