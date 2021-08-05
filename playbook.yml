@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: 'Update apt cache and do safe upgrade'
+    apt: 
+      update_cache: true
+      upgrade: safe
+    when: ansible_distribution in ["Ubuntu", "Debian"]
