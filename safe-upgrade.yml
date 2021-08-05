@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: 'Update apt cache'
+    apt: 
+      update_cache: true
+
+  - name: 'Do a safe system upgrade.'
+    apt:
+      upgrade: safe
